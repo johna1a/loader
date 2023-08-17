@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader Demo</title>
+    <link rel="stylesheet" href="loader-styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+</head>
+<body>
+
+    <div class="loader-screen" id="loader">
+        
+        <img src="newgif.gif" alt="" srcset="">
+        <!-- <p>loading...</p> -->
+    </div>
+    <div class="loading-document" id="loaded-document">
+        <!-- loading script has to go after loader and loaded-document declared but before the images -->
+        <script src="loader-script.js"></script>
+        <div class="div image-container">
+            <h1>A page with Images and text</h1>
+            <!-- count is added on errors also just in case so user is not stuck on load screen  -->
+            <img src="https://images.unsplash.com/photo-1682686580003-22d3d65399a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1931&q=80" onload="addToImageCount()" onerror="addToImageCount()" alt="" srcset="" class="loading-image">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non accusantium quae quam exercitationem dolore ea odio ad quo recusandae. Id?
+            </p>
+            <img src="https://images.unsplash.com/photo-1692121029383-c4cb81eb67e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" onload="addToImageCount()" onerror="addToImageCount()" alt="" srcset="" class="loading-image">
+            <img src="https://images.unsplash.com/photo-1691928860415-b1dcdc08a601?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" onload="addToImageCount()" onerror="addToImageCount()" alt="" srcset="" class="loading-image">
+
+        </div>    
+    </div>
+    
+</body>
+</html>
